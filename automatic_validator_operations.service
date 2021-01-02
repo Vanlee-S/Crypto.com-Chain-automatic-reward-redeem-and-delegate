@@ -1,0 +1,12 @@
+# /etc/systemd/system/chain-automate.service
+[Unit]
+Description=Crypto.com Automatic Validator Operations script by Christian Vari
+
+[Service]
+Type=simple
+User=vari_christian
+WorkingDirectory=<folder with chain-maind>
+ExecStart=bash <folder>/automatic_validator_operations.sh <operatorAddress> <validatorAddress> <keyPassword>
+
+[Install]
+WantedBy=multi-user.target
