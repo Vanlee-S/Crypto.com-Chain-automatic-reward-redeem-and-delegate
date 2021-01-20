@@ -27,7 +27,7 @@ do
     fi
     if (( $(echo "$currentBalance > 10000000000" |bc -l) )) 
     then
-            echo "Re-delegating rewards..."
+            echo "Delegating rewards..."
             echo $keyPassword | ./chain-maind tx staking delegate $operatorAddress "$currentBalance"basetcro --from $keyring --gas 80000000 --gas-prices 0.1basetcro --chain-id="crossfire" --keyring-backend="file" --node $node  -y
     fi
     sleep 5m
