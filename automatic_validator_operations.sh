@@ -1,4 +1,4 @@
-#!/bin/bash --
+#/bin/bash --
 
 echo "Crypto.com Automatic Validator Operations script by Christian Vari"
 
