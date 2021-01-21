@@ -30,5 +30,5 @@ do
             echo "Delegating rewards..."
             echo $keyPassword | ./chain-maind tx staking delegate $operatorAddress "$currentBalance"basetcro --from $keyring --gas 80000000 --gas-prices 0.1basetcro --chain-id="crossfire" --keyring-backend="file"--node $node  -y
     fi
-    sleep 1m
+    sleep 5m
 done
