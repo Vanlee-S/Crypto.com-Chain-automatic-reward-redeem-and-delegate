@@ -23,12 +23,12 @@ do
     if (( $(echo "$currentAvailableReward > 10000000000" |bc -l) )) 
     then
             echo "Withdrawing rewards..."
-            echo $keyPassword | ./chain-maind tx distribution withdraw-rewards $operatorAddress --commission --from $keyring --gas 80000000 --gas-prices 0.1basetcro --chain-id="crossfire" --keyring-backend="file" --node $node   -y
+            echo $keyPassword | ./chain-maind tx distribution withdraw-rewards $operatorAddress --commission --from $keyring --gas 80000000 --gas-prices 0.1basetcro --chain-id="crossfire" --node $node   -y
     fi
     if (( $(echo "$currentBalance > 10000000000" |bc -l) )) 
     then
             echo "Delegating rewards..."
-            echo $keyPassword | ./chain-maind tx staking delegate $operatorAddress "$currentBalance"basetcro --from $keyring --gas 80000000 --gas-prices 0.1basetcro --chain-id="crossfire" --keyring-backend="file" --node $node  -y
+            echo $keyPassword | ./chain-maind tx staking delegate $operatorAddress "$currentBalance"basetcro --from $keyring --gas 80000000 --gas-prices 0.1basetcro --chain-id="crossfire" --node $node  -y
     fi
     sleep 5m
 done
